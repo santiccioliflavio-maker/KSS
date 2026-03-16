@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>SISTEMA DI ACCESSO</title>
+    <style>
+        body { background: #000; color: #0f0; font-family: monospace; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; overflow: hidden; }
+        .terminal { border: 2px solid #0f0; padding: 30px; box-shadow: 0 0 15px #0f0; text-align: center; }
+        input { background: #000; border: 1px solid #0f0; color: #0f0; padding: 10px; margin: 15px 0; outline: none; width: 80%; }
+        button { background: #0f0; color: #000; border: none; padding: 10px 20px; cursor: pointer; font-weight: bold; }
+        button:hover { background: #0a0; }
+    </style>
+</head>
+<body>
+    <div class="terminal">
+        <h2>CENTRO DATI ALPHA</h2>
+        <p>INSERIRE CREDENZIALI DI LIVELLO 1_</p>
+        <input type="password" id="p" placeholder="PASSWORD">
+        <br>
+        <button onclick="check()">LOGIN</button>
+    </div>
+    <script>
+        function check() {
+            var pass = document.getElementById('p').value;
+            if (pass === 'cici') { window.location.href = 'alpha.html'; }
+            else { alert('ACCESSO NEGATO'); }
+        }
+    </script>
+</body>
+</html>
